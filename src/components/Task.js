@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'reactstrap';
+import ReactCSSTransitionGroup from 'react-transition-group'; 
 
 const Task = (props)=>{
     const { task, setList, index, list}=props;
@@ -18,14 +20,12 @@ const Task = (props)=>{
     }
 
     return(
-        <div className="container bg-secondary">
-            <h4>{task.name}</h4>
-            <div className="container">
-                <input onChange={onChange} checked={task.isComplete} className="btn btn-primary" type="checkbox"/>
-                <button onClick={onDelete} className="btn btn-sm btn-danger">Delete</button>
-            </div>
-            
-        </div>
+            <tr>
+                <td><input onChange={onChange} checked={task.isComplete}  type="checkbox"/></td>
+                <td><h4 ></h4>{task.name}</td>
+                <td><Button close  onClick={onDelete}  close />
+            </td> 
+            </tr>                   
     )
 }
 export default Task;

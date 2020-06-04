@@ -6,12 +6,23 @@ import './App.css';
 function App() {
   const [list, setList] = useState([]);
   return (
-    <div className="App container" >
-      {list.map((task, idx)=>(
+    <div className="jumbotron" style={{minHeight:"60rem"}}>
+      
+    <div className="App container w-50 mt-3 "  >
+      <h1>Todos List</h1>
+      <table className="table table-dark">
+            <tr>
+                <th scope="col">Done</th>
+                <th scope="col">Task</th>
+                <th scope="col">Delete</th>
+            </tr>{list.map((task, idx)=>(
         <Task key={idx} task={task} setList={setList} index={idx} list={list}/>
       ))}
+      </table>
+      
       
       <Input list={list} setList={setList} />
+    </div>
     </div>
   );
 }
