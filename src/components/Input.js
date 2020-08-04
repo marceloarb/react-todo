@@ -1,10 +1,7 @@
 import React ,{useState}from 'react';
 import { Button } from 'reactstrap';
 import './components.css';
-import AnimatedButton from 'react-animated-buttons'
-import ReactCSSTransitionGroup from 'react-transition-group';
-import { merge, tada, flip} from 'react-animations'; 
-import Radium, {StyleRoot} from 'radium';
+
 
 const Input = (props)=>{
     const {list,setList} = props;
@@ -37,8 +34,8 @@ const Input = (props)=>{
             
             <input id="reset" type="text" placeholder='New Task' className="form-control" onChange={onChange}  name="task"/>
             
-            <AnimatedButton onClick={onClick}  className="btn btn-secondary btn-block mt-1" >Submit</AnimatedButton>
-            <AnimatedButton onClick={onDelete}  color="danger" className="btn btn-danger btn-block mt-1 "  >Delete</AnimatedButton> 
+            <Button onClick={onClick}  className="btn btn-secondary btn-block mt-1" >Submit</Button>
+            <Button onClick={onDelete}  color="danger" className="btn btn-danger btn-block mt-1 "  >Delete</Button> 
             
             
             

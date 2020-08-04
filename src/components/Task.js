@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import ReactCSSTransitionGroup from 'react-transition-group'; 
 
 const Task = (props)=>{
     const { task, setList, index, list}=props;

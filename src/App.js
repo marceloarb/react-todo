@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Input from './components/Input'
 import Task from './components/Task'
 import './App.css';
+import { Button } from 'reactstrap';
+import HelloWorldService from './api/todo/HelloWorldService'
 
 function App() {
   const [list, setList] = useState([]);
@@ -22,9 +24,11 @@ function App() {
       
       
       <Input list={list} setList={setList} />
+        <HelloWorldService></HelloWorldService>
     </div>
     </div>
   );
-}
+};
+  
 
 export default App;
